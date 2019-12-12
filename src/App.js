@@ -8,8 +8,8 @@ import PagePLP from './Components/PagePLP';
 function App() {
   return (
     <div>
-      <PageCart />
       <PageHP />
+      <PageCart />
       <PagePDP />
       <PagePLP />
     </div>
