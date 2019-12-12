@@ -1,9 +1,19 @@
 import React from 'react';
 import './App.css';
-// import { render } from '@testing-library/react';
+import PageCart from './Components/PageCart';
+import PageHP from './Components/PageHP';
+import PagePDP from './Components/PagePDP';
+import PagePLP from './Components/PagePLP';
 
 function App() {
-  return <div>dadasd</div>;
+  return (
+    <div>
+      <PageCart />
+      <PageHP />
+      <PagePDP />
+      <PagePLP />
+    </div>
+  );
 }
 
 export default App;
