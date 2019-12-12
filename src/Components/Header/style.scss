@@ -1,0 +1,30 @@
+.header {
+  background: black;
+  .header-left {
+    color: white;
+    div {
+      font-size: 20px;
+      font-family: 'Josefin-Sans';
+      text-transform: uppercase;
+      margin-right: 20px;
+      a {
+        color: white;
+      }
+    }
+  }
+  .header-right {
+    div {
+      font-size: 16px;
+      color: #e2dfdf;
+      font-family: 'Josefin-Sans';
+      margin-left: 20px;
+      a {
+        color: #e2dfdf;
+      }
+    }
+  }
+
+  .header-logo {
+    padding: 20px 0 10px;
+  }
+}
