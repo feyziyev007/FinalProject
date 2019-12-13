@@ -1,0 +1,25 @@
+.footer {
+  background: black;
+  color: white;
+  padding: 100px 0;
+  .row {
+    margin-bottom: 50px;
+  }
+  .footer-title {
+    font-size: 24px;
+    font-family: 'Josefin-Sans';
+    text-transform: uppercase;
+  }
+  .footer-ul {
+    padding-left: 0;
+    list-style-type: none;
+    li {
+      padding-bottom: 15px;
+    }
+    a {
+      color: white;
+      font-size: 18px;
+      //   font-family: 'Open-Sans';
+    }
+  }
+}
