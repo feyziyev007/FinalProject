@@ -1,38 +1,80 @@
 import React from 'react';
 import style from './style.scss';
 
+import Category from './Components/index';
+
 export default class Header extends React.Component {
   render() {
-    const categories = [
+    const Datas = [
       {
-        id: 333,
-        name: "men's shoes",
-        date: '11-07-2018',
-        url: 'localhost/gogi/img.jpg'
+        id: 1,
+        category: 'men',
+        fit: 'skinny',
+        brand: 'buffalo',
+        description: 'a superb pair of jeans',
+        price: 200,
+        color: 'black',
+        size: '28',
+        images: ['img/products/women/skinny/001.png'],
+        date: '2019-12-15'
       },
       {
-        id: 334,
-        name: "women's shoes",
-        date: '6-07-2018',
-        url: 'localhost/gogi/img.jpg'
+        id: 2,
+        category: 'women',
+        fit: 'skinny',
+        brand: 'buffalo',
+        description: 'a superb pair of jeans',
+        price: 200,
+        color: 'black',
+        size: '28',
+        images: ['img/products/women/skinny/001.png'],
+        date: '2019-12-15'
       },
       {
-        id: 335,
-        name: "kid's shoes",
-        date: '12-07-2018',
-        url: 'localhost/gogi/img.jpg'
-      },
-      {
-        id: 336,
-        name: "noone's shoes",
-        date: '13-07-2018',
-        url: 'localhost/gogi/img.jpg'
+        id: 3,
+        category: 'accessory',
+        fit: 'skinny',
+        brand: 'buffalo',
+        description: 'a superb pair of jeans',
+        price: 200,
+        color: 'black',
+        size: '28',
+        images: ['img/products/women/skinny/001.png'],
+        date: '2019-12-15'
       }
+      // {
+      //   id: 333,
+      //   name: "men's shoes",
+      //   date: '11-07-2018',
+      //   url: 'localhost/gogi/img.jpg'
+      // },
+      // {
+      //   id: 334,
+      //   name: "women's shoes",
+      //   date: '6-07-2018',
+      //   url: 'localhost/gogi/img.jpg'
+      // },
+      // {
+      //   id: 335,
+      //   name: "kid's shoes",
+      //   date: '12-07-2018',
+      //   url: 'localhost/gogi/img.jpg'
+      // },
+      // {
+      //   id: 336,
+      //   name: "noone's shoes",
+      //   date: '13-07-2018',
+      //   url: 'localhost/gogi/img.jpg'
+      // }
     ];
     return (
       <section class="header container">
         <header class="d-flex justify-content-between align-items-center">
-          <div class="header-left d-flex justify-content-start"></div>
+          <div class="header-left d-flex justify-content-start">
+            {Datas.map(item => {
+              return <Category title={item.category} />;
+            })}
+          </div>
 
           <a href="#">
             <svg
@@ -49,7 +91,7 @@ export default class Header extends React.Component {
             </svg>
           </a>
 
-          <div class="header-right d-flex justify-content-end"></div>
+          {/* <div class="header-right d-flex justify-content-end"></div> */}
         </header>
       </section>
     );
