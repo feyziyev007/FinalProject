@@ -14,8 +14,9 @@ function App() {
       <PageHP />
       {/* <PageCart />
       <PagePDP />
-      <PagePLP /> */}
-      <Footer />
+      */}
+        <PagePLP />
+        <Footer />
     </div>
   );
 }
