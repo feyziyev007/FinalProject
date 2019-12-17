@@ -3,21 +3,27 @@ import './App.css';
 import PageCart from './Components/PageCart';
 import PageHP from './Components/PageHP';
 import PagePDP from './Components/PagePDP';
-import PagePLP from './Components/PagePLP';
+import PagePLP from './Components/PagePLP/pagePLP';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 function App() {
   return (
-    <div>
-      <Header />
-      <PageHP />
-      {/* <PageCart />
-      <PagePDP />
-      */}
-      <PagePLP />
-      <Footer />
-    </div>
+    <Router>
+      <Header/>
+      <Switch>
+        <Route exact path='/' component={PageHP}/>
+        <Route exact path='/cart' component={PageCart}/>
+        <Route exact path='/detail' component={PagePDP}/>
+        <Route exact path='/list' component={PagePLP}/>
+        <PageHP/>
+        <PageCart/>
+        <PagePDP/>
+        <PagePLP/>
+        <Footer/>
+      </Switch>
+    </Router>
   );
 }
 
