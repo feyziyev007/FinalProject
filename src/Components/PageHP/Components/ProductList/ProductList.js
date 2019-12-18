@@ -1,4 +1,5 @@
 import React from 'react';
+import style from './style.scss';
 import ProductCard from './ProductCard/ProductCard';
 
 export default class ProductList extends React.Component {
@@ -43,10 +44,12 @@ export default class ProductList extends React.Component {
     ];
 
     return (
-      <div className="row">
-        {products.map(item => (
+      <div className="ProductList">
+        <div className="row">
+          {products.map(item => (
             <ProductCard imgUrl={item.images[0]} imgCategory={item.category} />
-         ))}
+          ))}
+        </div>
       </div>
     );
   }
