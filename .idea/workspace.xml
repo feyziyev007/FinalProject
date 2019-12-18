@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b119b7b6-ebc4-46ac-83ec-4e968739a487" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/PagePDP/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/PagePDP/index.js" afterDir="false" />
-    </list>
+    <list default="true" id="b119b7b6-ebc4-46ac-83ec-4e968739a487" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +19,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="pdp" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -66,7 +63,7 @@
       <workItem from="1576565687013" duration="4000" />
       <workItem from="1576573776615" duration="64000" />
       <workItem from="1576658825575" duration="17000" />
-      <workItem from="1576658843579" duration="533000" />
+      <workItem from="1576658843579" duration="1458000" />
     </task>
     <servers />
   </component>
