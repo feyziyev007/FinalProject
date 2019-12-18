@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b119b7b6-ebc4-46ac-83ec-4e968739a487" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/PagePLP/Components/Categories/categories.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/PagePLP/Components/Categories/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/PagePLP/Components/Price/Price.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/PagePLP/Components/Price/styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/PagePLP/pagePLP.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/FinalProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FinalProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/PagePLP/Components/ListItem/ListItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/PagePLP/Components/ListItem/ListItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/PagePLP/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/PagePDP/Components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/PagePDP/Components/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/PagePDP/Components/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/PagePDP/Components/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/PagePDP/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/PagePDP/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,6 +22,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1V3kqGp8vngVWYmYu8v9ChTvmsG" />
@@ -43,6 +38,7 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -71,6 +67,9 @@
       <workItem from="1576565144116" duration="6000" />
       <workItem from="1576565687013" duration="4000" />
       <workItem from="1576573776615" duration="64000" />
+      <workItem from="1576658825575" duration="17000" />
+      <workItem from="1576658843579" duration="1718000" />
+      <workItem from="1576660612052" duration="2933000" />
     </task>
     <servers />
   </component>
