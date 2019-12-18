@@ -10,8 +10,8 @@ export default class SomeData extends React.Component {
         return (
 
             <div className="card-details ">
-                <img className="rounded " src={image}/>
-                <div className="card-body ">
+                <img className="rounded float-left col-6" src={image}/>
+                <div className="card-body float-right col-6">
                     <h5 className="card-title text-capitalize">{title}</h5>
                     <p className="card-text font-weight-bold text-capitalize">{price}</p>
                     <p className="card-text font-weight-bold text-capitalize">{color}</p>
