@@ -7,7 +7,7 @@ export default class ProductCard extends React.Component {
     console.log(this.props);
 
     return (
-      <div className="col-4">
+      <div className="col-md-4">
         <div class="card">
           <img src={imgUrl} class="card-img-top" alt="..." />
           <div class="card-body">{imgCategory}</div>
