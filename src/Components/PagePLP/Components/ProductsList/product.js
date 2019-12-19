@@ -1,7 +1,7 @@
 import React from "react";
 import style from './style.scss';
 
-class Categories extends React.Component {
+class Product extends React.Component {
   render(){
     const {img, description, color, size, category,fit,price,brand, class_name} = this.props;
     console.log(this.props);
@@ -14,4 +14,4 @@ class Categories extends React.Component {
   }
 }
 
-export default Categories;
+export default Product;
