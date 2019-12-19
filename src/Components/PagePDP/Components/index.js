@@ -9,10 +9,11 @@ export default class SomeData extends React.Component {
 
         return (
 
-            <div className="card-details ">
-                <img className="rounded float-left col-6" src={image}/>
-                <div className="card-body float-right col-6">
-                    <h5 className="card-title text-capitalize">{title}</h5>
+                    <div className="card-details  ">
+            <div className="card-details clearfix">
+                <img className="rounded float-left col-md-6 col-lg-6 col-xs-6 " src={image}/>
+                <div className="details-card-body float-right col-md-6 col-lg-6 col-xs-6">
+                    <h5 className="card-title text-capitalize mt-5">{title}</h5>
                     <p className="card-text font-weight-bold text-capitalize">{price}</p>
                     <p className="card-text font-weight-bold text-capitalize">{color}</p>
                     <p className="card-text font-weight-bold text-capitalize ">{brand}</p>
@@ -23,8 +24,8 @@ export default class SomeData extends React.Component {
                     <p className="text-secondary">
                     </p>
                     <p className="card-text ">{description}</p>
-                    <a href="#" className="btn btn-dark">Add To Basket</a>
-                </div> </div>
+                    <a href="/card" className="btn btn-dark">Add To Basket</a>
+                </div> </div>  </div>
         );
     }
 }

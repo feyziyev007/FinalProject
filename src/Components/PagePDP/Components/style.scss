@@ -1,4 +1,8 @@
-.card-body{
-  clear: left;
-  background-color: gray;
+.card-details {
+  border:3px solid black;
+  border-radius: 10px;
+    .details-card-body{
+      background-color: white;
+      color: black;
+  }
 }

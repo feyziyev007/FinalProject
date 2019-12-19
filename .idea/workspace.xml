@@ -33,7 +33,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../classwork/react-5-6-7-8_redux_acion_state_fetch" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -70,6 +70,9 @@
       <workItem from="1576658825575" duration="17000" />
       <workItem from="1576658843579" duration="1718000" />
       <workItem from="1576660612052" duration="2933000" />
+      <workItem from="1576678133252" duration="156000" />
+      <workItem from="1576734614163" duration="275000" />
+      <workItem from="1576735200798" duration="3150000" />
     </task>
     <servers />
   </component>
