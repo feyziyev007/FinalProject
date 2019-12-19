@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import style from './style.scss';
 import ListItem from './Components/ListItem/ListItem';
-import Categories from './Components/Categories/categories';
+import Categories from './Components/ProductsList/categories';
 import Price from './Components/Price/Price';
 
 
@@ -12,7 +12,7 @@ export default function PagePLP() {
     console.log(productData);
 
     async function getProduct() {
-        const productUrl = "https://58e22bfd-5fc0-4bd8-87d1-44fd691df288.mock.pstmn.io/products";
+        const productUrl = " https://my-json-server.typicode.com/nianman/json-mock2/products";
         const response = await fetch(productUrl);
         const data = await response.json();
         setProductData(data);
@@ -31,10 +31,18 @@ export default function PagePLP() {
 
 
             {productData.map(item => {
-                return (<Categories category={item.category}
+                return (<div>
+                    <div className='categoriesList'>
+
+                    </div>
 
 
-                                    class_name='clothes__subclass'/>);
+                    <div className='productList'><Categories img={item.images} description={item.description}
+                                                             color={item.color} size={item.size}
+                                                             category={item.category} fit={item.fit} price={item.price}
+                                                             brand={item.brand}
+                                                             class_name='clothes__subclass'/></div>
+                </div>);
             })}
             {/*<Price/>*/}
         </form>

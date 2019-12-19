@@ -1,7 +1,18 @@
 .clothes{
   display: flex;
-  background-color: black;
-  color: white;
-  flex-direction: column;
-  width: 20%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 80%;
+  justify-content: space-between;
+  &__subclass{
+    padding: 0;
+    text-align: center;
+  }
+}
+.productList{
+  margin: 50px 0 ;
+}
+.product{
+  width: 300px;
+  background-color: lightgray;
 }

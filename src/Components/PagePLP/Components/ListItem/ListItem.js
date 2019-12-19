@@ -3,8 +3,8 @@ import styles from './styles.scss';
 
 export default class ListItem extends React.Component {
   render() {
-    const { title, class_name } = this.props;
+    const { categoryName, class_name } = this.props;
 
-    return <li className={class_name}>{title}</li>;
+    return <li className={class_name}>{categoryName}</li>;
   }
 }
