@@ -46,12 +46,11 @@ export default class PagePDP extends React.Component {
 
     return (
         <div className="container">
-          <div className=" row ">
-            <div className="  ">
-              {Data.map(item => {
+            <div className=" row ">{
+              Data.map(item => {
                 return <SomeData title={item.title} brand={item.brand} color={item.color} price={item.price} size={item.size} image={item.url} description={item.description}/>;
-              })}
-            </div></div></div>
+              })}</div></div>
+
     )
   }
 }
