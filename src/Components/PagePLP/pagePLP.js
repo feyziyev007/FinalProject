@@ -35,8 +35,8 @@ export default function PagePLP() {
     return (
 
 
-        <form className="clothes">
-            <div className='categoriesList'>
+        <div className="clothes">
+            <form className='categoriesList'>
             {categoriesData.map(item=>{
                 return(
 
@@ -44,7 +44,7 @@ export default function PagePLP() {
 
                 )
             })}
-            </div>
+            </form>
             <div className='clothes__list'>
             {productData.map(item => {
                 return (
@@ -59,7 +59,7 @@ export default function PagePLP() {
                 );
             })}</div>
             {/*<Price/>*/}
-        </form>
+        </div>
     );
 }
 // const a = fetch("https://58e22bfd-5fc0-4bd8-87d1-44fd691df288.mock.pstmn.io/products").then(res => res.json());

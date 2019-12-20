@@ -16,7 +16,11 @@
     justify-content: space-between;
     &__p{
       margin: 0;
-      text-transform: uppercase;
+      text-transform: capitalize;
+    }
+    &__p:hover{
+      text-decoration: underline;
+      cursor: pointer;
     }
   }
 }
