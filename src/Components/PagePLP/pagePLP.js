@@ -36,28 +36,28 @@ export default function PagePLP() {
 
 
         <form className="clothes">
-
+            <div className='categoriesList'>
             {categoriesData.map(item=>{
                 return(
-                    <div>
-                        <div className='categoriesList'>
+
                                 <ListItem listName={item.category}/>
-                        </div>
-                    </div>
+
                 )
             })}
+            </div>
+            <div className='clothes__list'>
             {productData.map(item => {
-                return (<div>
+                return (
 
 
 
-                    <div className='productList'><Product img={item.images} description={item.description}
+                    <Product img={item.images} description={item.description}
                                                           color={item.color} size={item.size}
                                                           category={item.category} fit={item.fit} price={item.price}
                                                           brand={item.brand}
-                                                          class_name='clothes__subclass'/></div>
-                </div>);
-            })}
+                                                          class_name='clothes__subclass'/>
+                );
+            })}</div>
             {/*<Price/>*/}
         </form>
     );
