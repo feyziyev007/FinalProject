@@ -31,7 +31,6 @@ export default function PagePLP() {
         getCategories();
     }, []);
     // console.log(products);
-const [] = useState()
     return (
 
 
@@ -44,6 +43,8 @@ const [] = useState()
 
                 )
             })}
+            <input type='text' placeholder="Minimal price" className='priceButton'/>
+            <input type='text' placeholder="Maximum price" className='priceButton'/>
                 <button type='confirm' className='checkButton'>Confirm your choice!</button>
             </form>
             <div className='clothes__list'>
