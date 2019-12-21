@@ -44,10 +44,10 @@ export default class Header extends React.Component {
       }
     ];
     return (
-      <section class="header ">
+      <section className="header ">
         <section className="container">
-          <header class="d-flex justify-content-between align-items-center">
-            <div class="header-left d-flex justify-content-start header-logo">
+          <header className="d-flex justify-content-between align-items-center">
+            <div className="header-left d-flex justify-content-start header-logo">
               {/* {Datas.map(item => {
                 return <Category title={item.category} />;
               })} */}
@@ -67,7 +67,7 @@ export default class Header extends React.Component {
               </a>
             </div>
 
-            <div class="header-right d-flex justify-content-end">
+            <div className="header-right d-flex justify-content-end">
               <svg
                 width="15"
                 height="17"

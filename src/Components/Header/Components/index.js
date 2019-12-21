@@ -8,9 +8,9 @@ export default class Category extends React.Component {
 
     return (
       <div>
-        <div class="nav-item dropdown">
+        <div className="nav-item dropdown">
           <a
-            class="nav-link dropdown-toggle"
+            className="nav-link dropdown-toggle"
             href="#"
             id="navbarDropdownMenuLink"
             role="button"
@@ -20,8 +20,8 @@ export default class Category extends React.Component {
           >
             {title}
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">
+          <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a className="dropdown-item" href="#">
               Action
             </a>
           </div>

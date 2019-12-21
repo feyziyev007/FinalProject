@@ -4,16 +4,16 @@ import style from './style.scss';
 export default class Footer extends React.Component {
   render() {
     return (
-      <section class="footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4 footer-title">HELP</div>
-            <div class="col-md-4 footer-title">FOLLOW US</div>
-            <div class="col-md-4 footer-title">COMPANY</div>
+      <section className="footer">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-4 footer-title">HELP</div>
+            <div className="col-md-4 footer-title">FOLLOW US</div>
+            <div className="col-md-4 footer-title">COMPANY</div>
           </div>
-          <div class="row">
-            <div class="col-md-4">
-              <ul class="footer-ul">
+          <div className="row">
+            <div className="col-md-4">
+              <ul className="footer-ul">
                 <li>
                   <a href="#">Frequently asked questions</a>
                 </li>
@@ -28,8 +28,8 @@ export default class Footer extends React.Component {
                 </li>
               </ul>
             </div>
-            <div class="col-md-4">
-              <ul class="footer-ul">
+            <div className="col-md-4">
+              <ul className="footer-ul">
                 <li>
                   <a href="#">Facebook</a>
                 </li>
@@ -41,8 +41,8 @@ export default class Footer extends React.Component {
                 </li>
               </ul>
             </div>
-            <div class="col-md-4">
-              <ul class="footer-ul">
+            <div className="col-md-4">
+              <ul className="footer-ul">
                 <li>
                   <a href="#">History of the brand</a>
                 </li>

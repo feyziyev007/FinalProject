@@ -7,22 +7,21 @@ import PagePDP from './Components/PagePDP';
 import PagePLP from './Components/PagePLP/pagePLP';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-function App() {
+function App(props) {
+    console.log('props from APP = ', props);
+
   return (
     <Router>
       <Header />
-      <Switch>
+        <Switch>
         <Route exact path="/" component={PageHP} />
         <Route exact path="/cart" component={PageCart} />
         <Route exact path="/detail" component={PagePDP} />
         <Route exact path="/list" component={PagePLP} />
-        {/* <PageHP />
-        <PageCart />
-        <PagePDP /> */}
-        {/* <PagePLP /> */}
       </Switch>
     </Router>
   );
 }
 
 export default App;
+
