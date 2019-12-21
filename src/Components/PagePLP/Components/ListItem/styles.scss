@@ -3,3 +3,31 @@
   display: block;
   list-style: none;
 }
+
+.categoriesList {
+  background-color: black;
+  color: white;
+  width: 20%;
+  padding-top: 10px;
+
+  &__item {
+  display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+    &__p{
+      margin: 0;
+      text-transform: capitalize;
+    }
+    &__p:hover{
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+.clothes__list{
+  display: flex;
+  width: 80%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

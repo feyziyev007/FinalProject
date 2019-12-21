@@ -24,7 +24,7 @@ export default class Slider extends React.Component {
               <img src="../img/PageHP/hp-slider-1.png" class="d-block w-100" />
 
               <div class="carousel-caption d-none d-md-block">
-                <h2>New COllection</h2>
+                <h2>New Collection</h2>
                 <p>Shop Now</p>
               </div>
             </div>
