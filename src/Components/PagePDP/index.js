@@ -17,7 +17,6 @@ export default class PagePDP extends React.Component {
             await fetch("https://my-json-server.typicode.com/nianman/json-mock2/products")
                 .then(result => result.json())
                 .then(product => {
-                    console.log('SLK product = ', product);
                     this.setState({
                         isLoaded: true,
                         product: product
@@ -35,7 +34,6 @@ export default class PagePDP extends React.Component {
             return product.id.toString() === this.props.match.params.id
         });
 
-        console.log('SLK chosen element === ', chosenElement);
         return (
             <div className="container ">
                 <div className=" row">

@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './style.scss';
 import { connect } from 'react-redux';
-import {setItemsAction} from "../../../actions/userAction";
+import {setItemsAction} from "../../../actions/productAction";
 class SomeData extends React.Component {
     state = {
         quantity: 0,

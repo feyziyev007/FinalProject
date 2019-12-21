@@ -7,9 +7,7 @@ import PagePDP from './Components/PagePDP';
 import PagePLP from './Components/PagePLP/pagePLP';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-function App(props) {
-    console.log('props from APP = ', props);
-
+function App() {
   return (
     <Router>
       <Header />
@@ -24,4 +22,3 @@ function App(props) {
 }
 
 export default App;
-
