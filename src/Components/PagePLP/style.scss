@@ -1,7 +1,39 @@
 .clothes{
   display: flex;
-  background-color: black;
-  color: white;
-  flex-direction: column;
-  width: 20%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  &__list{
+    padding:0 10px;
+  }
+  &__img{
+    margin: 0 auto;
+  }
+
+}
+
+.product{
+  background-color: #e2dfdf;
+  margin:20px 0 ;
+  transform: scale(1,1);
+  transition: transform 500ms ease-in-out;
+  box-shadow: 0 0 3px gray;
+}
+.product:hover{
+  transform: scale(1.05,1.05);
+  transition: transform 500ms ease-in-out;
+}
+.checkButton{
+  margin: 30px auto;
+  padding: 7.5px 0 8px 0;
+  width: 100%;
+  background-color: goldenrod;
+  border: none;
+  border-radius: 2px;
+}
+.priceButton{
+  width: 100%;
+}
+.priceButton:first-of-type{
+  margin-top: 30px;
 }

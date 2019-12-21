@@ -1,39 +1,68 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import style from './style.scss';
 import ListItem from './Components/ListItem/ListItem';
-import Categories from './Components/Categories/categories';
+import Product from './Components/ProductsList/product';
 import Price from './Components/Price/Price';
 
-export default function PagePLP() {
-  const listCategory = [
-    { category: 'male' },
-    { category: 'female' },
-    { category: 'children' },
-    { size: 'small' },
-    { size: 'medium' },
-    { size: 'large' },
-    { brand: 'lee' },
-    { brand: 'levis' },
-    { brand: 'wrangler' }
-  ];
 
-  return (
-    <form className="clothes">
-      {listCategory.map(item => {
-        return (
-          <Categories
-            category={item.category}
-            size={item.size}
-            brand={item.brand}
-            class_name="clothes__subclass"
-          />
-        );
-      })}
-      <Price />
-    </form>
-  );
+export default function PagePLP() {
+
+    const [productData, setProductData] = useState([]);
+    const [categoriesData, setCategoriesData] = useState([]);
+
+    console.log(productData);
+    console.log(categoriesData);
+
+    async function getProduct() {
+        const productUrl = " https://my-json-server.typicode.com/nianman/json-mock2/products";
+        const response = await fetch(productUrl);
+        const data = await response.json();
+        setProductData(data);
+    }
+    async  function getCategories(){
+        const categoriesUrl = "https://my-json-server.typicode.com/nianman/json-mock2/categories";
+        const response = await fetch(categoriesUrl);
+        const categories = await response.json();
+        setCategoriesData(categories);
+    }
+
+    useEffect(() => {
+        getProduct();
+        getCategories();
+    }, []);
+    // console.log(products);
+    return (
+
+
+        <div className="clothes">
+            <form className='categoriesList'>
+            {categoriesData.map(item=>{
+                return(
+
+                                <ListItem listName={item.category}/>
+
+                )
+            })}
+            <input type='text' placeholder="Minimal price" className='priceButton'/>
+            <input type='text' placeholder="Maximum price" className='priceButton'/>
+                <button type='confirm' className='checkButton'>Confirm your choice!</button>
+            </form>
+            <div className='clothes__list'>
+            {productData.map(item => {
+                return (
+
+
+
+                    <Product img={item.images} description={item.description}
+                                                          color={item.color} size={item.size}
+                                                          category={item.category} fit={item.fit} price={item.price}
+                                                          brand={item.brand}
+                                                          class_name='clothes__subclass'/>
+                );
+            })}</div>
+            {/*<Price/>*/}
+        </div>
+    );
 }
-const a = fetch(
-  'https://58e22bfd-5fc0-4bd8-87d1-44fd691df288.mock.pstmn.io/products'
-).then(res => console.log(res.json()));
-console.log(a);
+// const a = fetch("https://58e22bfd-5fc0-4bd8-87d1-44fd691df288.mock.pstmn.io/products").then(res => res.json());
+// console.log(a);0
