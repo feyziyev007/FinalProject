@@ -8,7 +8,7 @@ export default class PagePDP extends React.Component {
         super(props);
         this.state = {
             isLoaded: false,
-            product: []
+            product: [],
         }
     }
 
@@ -17,58 +17,39 @@ export default class PagePDP extends React.Component {
             await fetch("https://my-json-server.typicode.com/nianman/json-mock2/products")
                 .then(result => result.json())
                 .then(product => {
+                    console.log('SLK product = ', product);
                     this.setState({
-                        ...this.state,
                         isLoaded: true,
                         product: product
                     })
                 })
         };
+
         getData();
     }
 
     render() {
 
-        let chosenElement = this.state.product.filter(product => {
-            console.log('SLK product = ', product.id, this.props.match.params.id);
 
+        let chosenElement = this.state.product.find(product => {
             return product.id.toString() === this.props.match.params.id
         });
-        console.log('chosenElement', chosenElement);
 
-        // const chosenElement = this.state.product.forEach(product => {
-        //     if (product.id === this.props.match.id){
-        //         return product.id;
-        //     }
-        // });
-
-        //
-        // const arr = [{id: 10, name:'10'}, {id: 20, name: '20'}, 5986, 30, 415611, 583];
-        // //
-        //
-        // const arr2 = arr.filter(
-        //     item=> {
-        //         if(item.id % 10 === 0 ) {
-        //             return true;
-        //         }
-        //     });
-        //
-        // console.log('filtering = ', arr2);
-
+        console.log('SLK chosen element === ', chosenElement);
         return (
             <div className="container ">
                 <div className=" row">
-                    <SomeData
-                        id={this.state.product.id}
-                        fit={this.state.product.fit}
-                        title={this.state.product.title}
-                        brand={this.state.product.brand}
-                        color={this.state.product.color}
-                        price={this.state.product.price}
-                        size={this.state.product.size}
-                        image={this.state.product.images}
-                        description={this.state.product.description}
-                    />}
+                    {this.state.isLoaded ? <SomeData
+                        id={chosenElement.id}
+                        fit={chosenElement.fit}
+                        title={chosenElement.title}
+                        brand={chosenElement.brand}
+                        color={chosenElement.color}
+                        price={chosenElement.price}
+                        size={chosenElement.size}
+                        image={chosenElement.images}
+                        description={chosenElement.description}
+                    /> : null}
                 </div>
             </div>
         );
