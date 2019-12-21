@@ -31,7 +31,7 @@ export default function PagePLP() {
         getCategories();
     }, []);
     // console.log(products);
-
+const [] = useState()
     return (
 
 
@@ -44,6 +44,7 @@ export default function PagePLP() {
 
                 )
             })}
+                <button type='confirm' className='checkButton'>Confirm your choice!</button>
             </form>
             <div className='clothes__list'>
             {productData.map(item => {

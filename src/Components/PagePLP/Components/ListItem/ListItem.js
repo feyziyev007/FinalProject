@@ -6,8 +6,8 @@ export default class ListItem extends React.Component {
         const {listName} = this.props;
 
         return (<div className='categoriesList__item'>
-            <p className='categoriesList__item__p' >{listName}</p>
-            <input type="checkbox" placeholder={`${listName}`}/>
+            <label for={`${listName}`} className='categoriesList__item__p' >{listName}</label>
+            <input type="checkbox" id={`${listName}`}/>
         </div>);
     }
 }
