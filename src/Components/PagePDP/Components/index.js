@@ -13,7 +13,7 @@ class SomeData extends React.Component {
         return (
             <form className="card-details">
                 <div className="card-details clearfix">
-                    <img className="rounded float-left col-md-6 col-lg-6 col-xs-6 " src={image}/>
+                    <img className="rounded float-left col-md-6 col-lg-6 col-xs-6 " src={`${image}`}/>
                     <div className="details-card-body float-right col-md-6 col-lg-6 col-xs-6">
                         <h5 className="card-title text-capitalize mt-5">
                             {title}

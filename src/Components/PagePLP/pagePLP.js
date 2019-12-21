@@ -3,7 +3,7 @@ import style from './style.scss';
 import ListItem from './Components/ListItem/ListItem';
 import Product from './Components/ProductsList/product';
 import Price from './Components/Price/Price';
-
+import {Link} from "react-router-dom";
 
 export default function PagePLP() {
 
@@ -19,7 +19,8 @@ export default function PagePLP() {
         const data = await response.json();
         setProductData(data);
     }
-    async  function getCategories(){
+
+    async function getCategories() {
         const categoriesUrl = "https://my-json-server.typicode.com/nianman/json-mock2/categories";
         const response = await fetch(categoriesUrl);
         const categories = await response.json();
@@ -31,35 +32,40 @@ export default function PagePLP() {
         getCategories();
     }, []);
     // console.log(products);
+    const productStyles={
+        textDecoration:"none",
+        color:'black'
+    };
     return (
 
 
         <div className="clothes">
             <form className='categoriesList'>
-            {categoriesData.map(item=>{
-                return(
+                {categoriesData.map(item => {
+                    return (
 
-                                <ListItem listName={item.category}/>
+                        <ListItem listName={item.category}/>
 
-                )
-            })}
-            <input type='text' placeholder="Minimal price" className='priceButton'/>
-            <input type='text' placeholder="Maximum price" className='priceButton'/>
+                    )
+                })}
+                <input type='text' placeholder="Minimal price" className='priceButton'/>
+                <input type='text' placeholder="Maximum price" className='priceButton'/>
                 <button type='confirm' className='checkButton'>Confirm your choice!</button>
             </form>
             <div className='clothes__list'>
-            {productData.map(item => {
-                return (
+                {productData.map(item => {
+                    return (
 
 
-
-                    <Product img={item.images} description={item.description}
-                                                          color={item.color} size={item.size}
-                                                          category={item.category} fit={item.fit} price={item.price}
-                                                          brand={item.brand}
-                                                          class_name='clothes__subclass'/>
-                );
-            })}</div>
+                        <Link style={productStyles} to={'detail/' + `${item.id}`}>
+                            <Product id={item.id} img={item.images} description={item.description}
+                                     color={item.color} size={item.size}
+                                     category={item.category} fit={item.fit} price={item.price}
+                                     brand={item.brand}
+                                     class_name='clothes__subclass'/>
+                        </Link>
+                    );
+                })}</div>
             {/*<Price/>*/}
         </div>
     );

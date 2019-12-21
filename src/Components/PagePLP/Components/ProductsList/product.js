@@ -5,7 +5,7 @@ class Product extends React.Component {
 
   render(){
 
-      const {img, description, color, size, category,fit,price,brand, class_name} = this.props;
+      const {img,id, description, color, size, category,fit,price,brand, class_name} = this.props;
     console.log(this.props);
     return (<div className='product'>
         <img src={`${img}`} width='250px' height='500px' className='clothes__img'/>

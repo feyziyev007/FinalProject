@@ -16,7 +16,7 @@ function App(props) {
         <Switch>
         <Route exact path="/" component={PageHP} />
         <Route exact path="/cart" component={PageCart} />
-        <Route exact path="/detail" component={PagePDP} />
+        <Route exact path="/detail/:id" component={PagePDP} />
         <Route exact path="/list" component={PagePLP} />
       </Switch>
     </Router>
