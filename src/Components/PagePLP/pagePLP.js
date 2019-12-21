@@ -10,8 +10,6 @@ import {filterProducts} from "../../actions/productAction";
 function PagePLP(props) {
     const [productData, setProductData] = useState([]);
     const [categoriesData, setCategoriesData] = useState([]);
-    console.log(productData);
-    console.log(categoriesData);
 
     async function getProduct() {
         const productUrl = " https://my-json-server.typicode.com/nianman/json-mock2/products";
@@ -36,9 +34,9 @@ function PagePLP(props) {
         textDecoration:"none",
         color:'black'
     };
+
+    console.log('SLK test props.filteredItems === ', props.filteredItems)
     return (
-
-
         <div className="clothes">
             <form className='categoriesList'>
                 {categoriesData.map(item => {
@@ -61,8 +59,6 @@ function PagePLP(props) {
             <div className='clothes__list'>
                 {productData.map(item => {
                     return (
-
-
                         <Link style={productStyles} to={'detail/' + `${item.id}`}>
                             <Product id={item.id} img={item.images} description={item.description}
                                      color={item.color} size={item.size}
@@ -81,8 +77,9 @@ function PagePLP(props) {
 const mapStateToProps = store => {
     console.log('SLK store = ', store)
 
-    // product: state.product.items,
-    // size: state.product.gender
+    return {
+        filteredItems: store.basket.filteredItems
+    }
 };
 
 export default connect(mapStateToProps, {filterProducts})(PagePLP);

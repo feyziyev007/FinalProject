@@ -28,8 +28,6 @@ export default class PagePDP extends React.Component {
     }
 
     render() {
-
-
         let chosenElement = this.state.product.find(product => {
             return product.id.toString() === this.props.match.params.id
         });

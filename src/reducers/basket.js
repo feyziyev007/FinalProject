@@ -1,7 +1,7 @@
 export const initialState={
     items: [],
     filteredItems:[],
-    gender: ''
+    userFilter: ''
 };
 export function basketReducer(state = initialState, action) {
     switch (action.type) {
