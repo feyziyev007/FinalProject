@@ -16,10 +16,10 @@ function App() {
         <Route exact path="/cart" component={PageCart} />
         <Route exact path="/detail" component={PagePDP} />
         <Route exact path="/list" component={PagePLP} />
-        <PageHP />
+        {/* <PageHP />
         <PageCart />
-        <PagePDP />
-        <PagePLP />
+        <PagePDP /> */}
+        {/* <PagePLP /> */}
       </Switch>
     </Router>
   );
