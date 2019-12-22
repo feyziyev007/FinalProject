@@ -1,5 +1,9 @@
-.clothes__subclass{
-  padding: 10px auto;
-  text-align: center;
-  margin: 0;
+@media screen and (min-width: 320px) and (max-width: 560px){
+html{
+  font-size: 12px;
+}
+  .clothes__subclass{
+    padding: 10px auto;
+    margin: 0;
+  }
 }

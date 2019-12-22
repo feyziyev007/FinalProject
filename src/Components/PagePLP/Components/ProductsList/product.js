@@ -8,7 +8,7 @@ class Product extends React.Component {
       const {img,id, description, color, size, category,fit,price,brand, class_name} = this.props;
     // console.log("props of productjs",this.props);
     return (<div className='product'>
-        <img src={`${img}`} width='250px' height='350px' className='clothes__img'/>
+        <img src={`${img}`} className='clothes__img'/>
         <label className={class_name}>Jeans for {category}</label>
         <label className={class_name}>Color: {color}</label>
         <label className={class_name}>Brand: {brand}</label>
