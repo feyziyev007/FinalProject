@@ -10,9 +10,9 @@ import {filterProducts} from "../../actions/productAction";
 function PagePLP(props) {
     const [productData, setProductData] = useState([]);
     const [categoriesData, setCategoriesData] = useState([]);
-
+    console.log("productdatra",productData);
     async function getProduct() {
-        const productUrl = " https://my-json-server.typicode.com/nianman/json-mock2/products";
+        const productUrl = "https://my-json-server.typicode.com/nianman/json-mock2/products";
         const response = await fetch(productUrl);
         const data = await response.json();
         setProductData(data);
@@ -52,12 +52,21 @@ function PagePLP(props) {
                     )
                 })}
 
-                <input type='text' placeholder="Minimal price" className='priceButton'/>
-                <input type='text' placeholder="Maximum price" className='priceButton'/>
-                <button type='confirm' className='checkButton'>Confirm your choice!</button>
             </form>
             <div className='clothes__list'>
-                {productData.map(item => {
+                {props.filteredItems.length? props.filteredItems.map(item => {
+                    return(
+                        <Link style={productStyles} to={'detail/' + `${item.id}`}>
+                            <Product id={item.id} img={item.images} description={item.description}
+                                     color={item.color} size={item.size}
+                                     category={item.category} fit={item.fit} price={item.price}
+                                     brand={item.brand}
+                                     class_name='clothes__subclass'/>
+                        </Link>
+                    )
+                    })
+                    :
+                    productData.map(item => {
                     return (
                         <Link style={productStyles} to={'detail/' + `${item.id}`}>
                             <Product id={item.id} img={item.images} description={item.description}

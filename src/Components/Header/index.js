@@ -89,7 +89,8 @@ export default class Header extends React.Component {
                                 <circle cx="4.1416" cy="7.74426" r="0.607421" fill="#C4C4C4"/>
                                 <circle cx="10.3262" cy="7.74426" r="0.607421" fill="#C4C4C4"/>
                             </svg>
-                            <a href="#">Shopping Bag</a>
+                            <Link to='/list'>Shop Now!</Link>
+                            {/*<a href="#">Shopping Bag</a>*/}
                         </div>
                     </header>
                 </section>

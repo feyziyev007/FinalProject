@@ -19,11 +19,9 @@ class SomeData extends React.Component {
                             {title}
                         </h5>
                         <h2 className="card-text font-weight-bold text-capitalize">
-                            {price}
+                            price: $ {price}
                         </h2>
-                        <span className="font-weight-bold">
-                            Choose your fav color:
-                        </span>
+
                         <div className="available-color rounded-circle" style={{backgroundColor: `${color}`}}/>
                         <p className="card-text font-weight-bold text-capitalize ">
                             Brand: {brand}
@@ -32,7 +30,7 @@ class SomeData extends React.Component {
                             Fit: {fit}
                         </p>
                         <span className="font-weight-bold">
-                            Available sizes:
+                            Size:
                         </span>
                         <p className="font-weight-bold ">
                             {size}

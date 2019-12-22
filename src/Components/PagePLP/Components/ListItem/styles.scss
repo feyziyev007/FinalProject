@@ -7,10 +7,10 @@
 .categoriesList {
   background-color: black;
   color: white;
-  width: 20%;
-  padding-top: 10px;
-
+  font-weight: bolder;
+  width: 17%;
   &__item {
+    border: 1px solid black;
   display: flex;
     align-items: center;
     padding: 20px;

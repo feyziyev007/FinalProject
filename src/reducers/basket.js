@@ -9,7 +9,7 @@ export function basketReducer(state = initialState, action) {
             return {...state, items: action.payload};
         case "DO_FILTER_PRODUCTS":
 
-            console.log('SLK action = ', action);
+            console.log('SLK action = ', action.payload);
             return {
                 ...state,
                 filteredItems: action.payload.items,
