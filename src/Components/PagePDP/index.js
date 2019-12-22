@@ -34,7 +34,7 @@ export default class PagePDP extends React.Component {
 
         return (
             <div className="container ">
-                <div className=" row">
+                <div className=" row d-flex justify-content-center">
                     {this.state.isLoaded ? <SomeData
                         id={chosenElement.id}
                         fit={chosenElement.fit}
