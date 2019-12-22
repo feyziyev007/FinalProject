@@ -1,13 +1,14 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import style from './style.scss';
 import FilterItem from './Components/ListItem/FilterItem';
 import Product from './Components/ProductsList/product';
 import Price from './Components/Price/Price';
-import {Link} from "react-router-dom";
-import {connect} from 'react-redux';
-import {filterProducts} from "../../actions/productAction";
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { filterProducts } from '../../actions/productAction';
 
 function PagePLP(props) {
+
     const [productData, setProductData] = useState([]);
     const [categoriesData, setCategoriesData] = useState([]);
     console.log("productdatra",productData);
@@ -18,28 +19,40 @@ function PagePLP(props) {
         setProductData(data);
     }
 
-    async function getCategories() {
-        const categoriesUrl = "https://my-json-server.typicode.com/nianman/json-mock2/categories";
-        const response = await fetch(categoriesUrl);
-        const categories = await response.json();
-        setCategoriesData(categories);
-    }
 
-    useEffect(() => {
-        getProduct();
-        getCategories();
-    }, []);
-    // console.log(products);
-    const productStyles={
-        textDecoration:"none",
-        color:'black'
-    };
+  async function getCategories() {
+    const categoriesUrl =
+      'https://my-json-server.typicode.com/nianman/json-mock2/categories';
+    const response = await fetch(categoriesUrl);
+    const categories = await response.json();
+    setCategoriesData(categories);
+  }
 
-    console.log('SLK test props.filteredItems === ', props.filteredItems)
-    return (
-        <div className="clothes">
-            <form className='categoriesList'>
-                {categoriesData.map(item => {
+  useEffect(() => {
+    getProduct();
+    getCategories();
+  }, []);
+  // console.log(products);
+  const productStyles = {
+    textDecoration: 'none',
+    color: 'black'
+  };
+
+  console.log('SLK test props.filteredItems === ', props.filteredItems);
+  return (
+    <div className="clothes">
+      <form className="categoriesList">
+        {categoriesData.map(item => {
+          return (
+            <FilterItem
+              listName={item.category}
+              onChangeHeandler={() => {
+                props.filterProducts(productData, item.category);
+              }}
+            />
+          );
+        })}
+
 
                     return (
                         <FilterItem
@@ -80,15 +93,16 @@ function PagePLP(props) {
             {/*<Price/>*/}
         </div>
     );
+
 }
 // const a = fetch("https://58e22bfd-5fc0-4bd8-87d1-44fd691df288.mock.pstmn.io/products").then(res => res.json());
 // console.log(a);0
 const mapStateToProps = store => {
-    console.log('SLK store = ', store)
+  console.log('SLK store = ', store);
 
-    return {
-        filteredItems: store.basket.filteredItems
-    }
+  return {
+    filteredItems: store.basket.filteredItems
+  };
 };
 
-export default connect(mapStateToProps, {filterProducts})(PagePLP);
+export default connect(mapStateToProps, { filterProducts })(PagePLP);

@@ -1,9 +1,10 @@
-export const initialState={
-    items: [],
-    filteredItems:[],
-    userFilter: ''
+export const initialState = {
+  items: [],
+  filteredItems: [],
+  userFilter: ''
 };
 export function basketReducer(state = initialState, action) {
+
     switch (action.type) {
          case "SET_ITEMS":
             return {...state, items: action.payload};
@@ -18,3 +19,4 @@ export function basketReducer(state = initialState, action) {
             return state
     }
 };
+

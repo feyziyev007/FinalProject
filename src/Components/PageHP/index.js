@@ -9,7 +9,9 @@ export default class PageHP extends React.Component {
     return (
       <section class="page-hp">
         <Slider />
+
         {/*<ProductList />*/}
+
         <Footer />
       </section>
     );

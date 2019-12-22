@@ -1,7 +1,8 @@
-import React from "react";
+import React from 'react';
 import style from './style.scss';
 
 class Product extends React.Component {
+
 
   render(){
 
@@ -9,11 +10,13 @@ class Product extends React.Component {
     // console.log("props of productjs",this.props);
     return (<div className='product'>
         <img src={`${img}`} className='clothes__img'/>
+
         <label className={class_name}>Jeans for {category}</label>
         <label className={class_name}>Color: {color}</label>
         <label className={class_name}>Brand: {brand}</label>
         <label className={class_name}>Price: ${price}</label>
-    </div>);
+      </div>
+    );
   }
 }
 

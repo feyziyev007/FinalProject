@@ -4,7 +4,7 @@ import style from './style.scss';
 export default class Slider extends React.Component {
   render() {
     return (
-      <div class="">
+      <div>
         <div
           id="carouselExampleCaptions"
           class="carousel slide"
