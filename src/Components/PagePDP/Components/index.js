@@ -19,11 +19,11 @@ class SomeData extends React.Component {
                             {title}
                         </h5>
                         <h2 className="card-text font-weight-bold text-capitalize">
-                            {price}
+                            price: $ {price}
                         </h2>
-                        <span className="font-weight-bold">
-                            Available colors:
-                        </span>
+
+
+
                         <div className="available-color rounded-circle" style={{backgroundColor: `${color}`}}/>
                         <p className="card-text font-weight-bold text-capitalize ">
                             Brand: {brand}
@@ -31,7 +31,11 @@ class SomeData extends React.Component {
                         <p className="card-text font-weight-bold text-capitalize ">
                             Fit: {fit}
                         </p>
-                        <p className="card-text font-weight-bold text-capitalize ">{description}</p>
+
+                        <span className="font-weight-bold">
+                            Size:
+                        </span>
+
                         <p className="font-weight-bold ">
                             Available sizes:  {size}
                         </p>

@@ -10,7 +10,8 @@ export default class FilterItem extends React.Component {
             <label for={`${listName}`} className='categoriesList__item__p' >
                 {listName}
             </label>
-            <input type="checkbox" id={`${listName}`} onChange={()=>onChangeHeandler()}/>
+            <input type="radio" name="." id={`${listName}`} onChange={()=>onChangeHeandler()}/>
+
         </div>
         );
     }

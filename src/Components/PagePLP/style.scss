@@ -1,39 +1,144 @@
-.clothes{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  &__list{
-    padding:0 10px;
-  }
-  &__img{
-    margin: 0 auto;
+@media only screen and (min-width: 320px) and (max-width: 560px){
+    html{font-size: 12px;}
+  .clothes{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    &__list{
+    }
+    &__img{
+      margin: 0 auto;
+      width: 100%;
+    }
+
   }
 
+  .product{
+    width: 100%;
+    background-color: #e2dfdf;
+    margin:20px auto ;
+    transform: scale(1,1);
+    transition: transform 500ms ease-in-out;
+    box-shadow: 0 0 13px gray;
+  }
+  .product:hover{
+    transform: scale(1.05,1.05);
+    transition: transform 500ms ease-in-out;
+  }
+  .checkButton{
+    margin: 30px auto;
+    padding: 7.5px 0 8px 0;
+    width: 100%;
+    background-color: goldenrod;
+    border: none;
+    border-radius: 2px;
+  }
+  .priceButton{
+    width: 100%;
+  }
+  .priceButton:first-of-type{
+    margin-top: 30px;
+  }
+}
+@media only screen and (min-width: 560px) and (max-width: 980px){
+    html{
+      font-size: 18px;
+    }
+  .clothes{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    &__list{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &__img{
+      margin: 0 auto;
+      width: 100%;
+    }
+
+  }
+
+  .product{
+margin-right: 0.5rem;
+margin-bottom: 2rem;
+    height: 25rem;
+    width:10rem;
+    background-color: #e2dfdf;
+
+    transform: scale(1,1);
+    transition: transform 500ms ease-in-out;
+    box-shadow: 0 0 13px gray;
+  }
+  .product:hover{
+    transform: scale(1.05,1.05);
+    transition: transform 500ms ease-in-out;
+  }
+  .checkButton{
+    margin: 30px auto;
+    padding: 7.5px 0 8px 0;
+    width: 100%;
+    background-color: goldenrod;
+    border: none;
+    border-radius: 2px;
+  }
+  .priceButton{
+    width: 100%;
+  }
+  .priceButton:first-of-type{
+    margin-top: 30px;
+  }
 }
 
-.product{
-  background-color: #e2dfdf;
-  margin:20px 0 ;
-  transform: scale(1,1);
-  transition: transform 500ms ease-in-out;
-  box-shadow: 0 0 13px gray;
-}
-.product:hover{
-  transform: scale(1.05,1.05);
-  transition: transform 500ms ease-in-out;
-}
-.checkButton{
-  margin: 30px auto;
-  padding: 7.5px 0 8px 0;
-  width: 100%;
-  background-color: goldenrod;
-  border: none;
-  border-radius: 2px;
-}
-.priceButton{
-  width: 100%;
-}
-.priceButton:first-of-type{
-  margin-top: 30px;
+
+@media only screen and (min-width: 980px) and (max-width: 1400px){
+  html{
+    font-size: 18px;
+  }
+  .clothes{
+    display: flex;
+    flex-direction: column;
+    &__list{
+      width: 70%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &__img{
+      margin: 0 auto;
+      width: 100%;
+    }
+
+  }
+
+  .product{
+    margin-right: 0.5rem;
+    margin-bottom: 2rem;
+    height: 25rem;
+    width:10rem;
+    background-color: #e2dfdf;
+
+    transform: scale(1,1);
+    transition: transform 500ms ease-in-out;
+    box-shadow: 0 0 13px gray;
+  }
+  .product:hover{
+    transform: scale(1.05,1.05);
+    transition: transform 500ms ease-in-out;
+  }
+  .checkButton{
+    margin: 30px auto;
+    padding: 7.5px 0 8px 0;
+    width: 100%;
+    background-color: goldenrod;
+    border: none;
+    border-radius: 2px;
+  }
+  .priceButton{
+    width: 100%;
+  }
+  .priceButton:first-of-type{
+    margin-top: 30px;
+  }
 }
