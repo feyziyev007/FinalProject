@@ -13,8 +13,8 @@ class SomeData extends React.Component {
         return (
             <form className="card-details">
                 <div className="card-details clearfix">
-                    <img className="rounded float-left col-md-6 col-lg-6 col-xs-6 " src={`${image}`}/>
-                    <div className="details-card-body float-right col-md-6 col-lg-6 col-xs-6">
+                    <img className="mt-5 rounded float-left col-sm-12 col-md-12 col-lg-6 col-xs-12 " src={`${image}`}/>
+                    <div className="details-card-body float-right col-sm-12 col-md-12 col-lg-6 col-xs-12">
                         <h5 className="card-title text-capitalize mt-5">
                             {title}
                         </h5>
@@ -22,7 +22,7 @@ class SomeData extends React.Component {
                             {price}
                         </h2>
                         <span className="font-weight-bold">
-                            Choose your fav color:
+                            Available colors:
                         </span>
                         <div className="available-color rounded-circle" style={{backgroundColor: `${color}`}}/>
                         <p className="card-text font-weight-bold text-capitalize ">
@@ -31,24 +31,20 @@ class SomeData extends React.Component {
                         <p className="card-text font-weight-bold text-capitalize ">
                             Fit: {fit}
                         </p>
-                        <span className="font-weight-bold">
-                            Available sizes:
-                        </span>
+                        <p className="card-text font-weight-bold text-capitalize ">{description}</p>
                         <p className="font-weight-bold ">
-                            {size}
+                            Available sizes:  {size}
                         </p>
                         <span className="font-weight-bold">
                             Quantity:
                         </span>
-                        <input
+                        <input className="form-control col-xs-1 col-sm-4 col-md-4 col-lg-4"
                             type="number"
                             required min="1"
 
                             onChange={(event)=>{this.setQuantity(event)}}
                         />
-                        <p className="card-text ">{description}</p>
-
-                        <button className="btn btn-dark"
+                        <button className="btn btn-dark mt-3"
                                 onClick={(event)=>{this.submitHandler(event)}}
                         >
                             Add to basket
