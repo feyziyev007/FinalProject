@@ -20,7 +20,10 @@ export default class Category extends React.Component {
           >
             {title}
           </a>
-          <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <div
+            className="dropdown-menu"
+            aria-labelledby="navbarDropdownMenuLink"
+          >
             <a className="dropdown-item" href="#">
               Action
             </a>
