@@ -14,12 +14,13 @@ export default class PagePDP extends React.Component {
 
     componentDidMount() {
         const getData = async () => {
-            await fetch("https://my-json-server.typicode.com/nianman/json-mock2/products")
+            await fetch("https://ibatech-ecommerce.herokuapp.com/api/products/all")
                 .then(result => result.json())
                 .then(product => {
+                    console.log("this is product",product.products);
                     this.setState({
                         isLoaded: true,
-                        product: product
+                        product: product.products
                     })
                 })
         };
@@ -29,7 +30,7 @@ export default class PagePDP extends React.Component {
 
     render() {
         let chosenElement = this.state.product.find(product => {
-            return product.id.toString() === this.props.match.params.id
+            return product.id.toString() === this.props.match.params.id.toString()
         });
 
         return (
@@ -43,7 +44,7 @@ export default class PagePDP extends React.Component {
                         color={chosenElement.color}
                         price={chosenElement.price}
                         size={chosenElement.size}
-                        image={chosenElement.images}
+                        image={chosenElement.images[0]}
                         description={chosenElement.description}
                     /> : null}
                 </div>
