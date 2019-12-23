@@ -62,13 +62,13 @@ export default class Header extends React.Component {
             </Link>
 
             <div className="header-right d-flex justify-content-end">
-              <Link to="list">
+              <Link to="/list">
                 <a href="#">
                   <img src={cart}></img>
                   Shop List
                 </a>
               </Link>{' '}
-              <Link to="cart">
+              <Link to="/cart">
                 <a href="#">
                   <img src={cart}></img>
                   Shopping Bag
