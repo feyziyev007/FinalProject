@@ -2,7 +2,10 @@ import React from 'react';
 import style from './style.scss';
 import { connect } from 'react-redux';
 import {setItemsAction} from "../../../actions/productAction";
+import {Link} from "react-router-dom";
+
 class SomeData extends React.Component {
+
     state = {
         quantity: 0,
     };
@@ -48,11 +51,12 @@ class SomeData extends React.Component {
 
                             onChange={(event)=>{this.setQuantity(event)}}
                         />
-                        <button className="btn btn-dark mt-3"
-                                onClick={(event)=>{this.submitHandler(event)}}
-                        >
+                        <Link to='/form'>
+                            <button className="btn btn-dark mt-3"
+                                >
                             Add to basket
                         </button>
+                        </Link>
                     </div>
                 </div>
             </form>
